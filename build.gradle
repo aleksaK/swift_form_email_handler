@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-integration', version: '2.6.4'
+    implementation group: 'com.prowidesoftware', name: 'pw-swift-core', version: 'SRU2021-9.2.11'
+    implementation group: 'org.springframework.integration', name: 'spring-integration-mail', version: '5.5.9'
+    implementation group: 'com.sun.mail', name: 'javax.mail', version: '1.6.2'
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+    testImplementation('junit:junit:4.13.2')
+    testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-integration', version: '2.6.4'
+    testImplementation group: 'com.prowidesoftware', name: 'pw-swift-core', version: 'SRU2021-9.2.11'
+    testImplementation group: 'org.springframework.integration', name: 'spring-integration-mail', version: '5.5.9'
+    testImplementation group: 'com.sun.mail', name: 'javax.mail', version: '1.6.2'
+    testCompileOnly 'org.projectlombok:lombok:1.18.22'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+}
